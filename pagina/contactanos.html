@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de contactos</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+	</style>
+</head>
+<body>
+	<div id="nav">
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="p-2 bd-highlight"><a href="index.html">Bienvenido</a></div>
+		<div class="p-2 bd-highlight"><a href="nosotros.html">Nosotros</a></div>
+		<div class="p-2 bd-highlight"><a href="servicios.html">Servicios</a></div>
+		<div class="p-2 bd-highlight"><a href="contactanos.html">Contactanos</a></div>
+	</nav>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="well well-sm">
+					<form class="form-horizontal" method="post">
+						<fieldset>
+							<legend class="text-center header">Contactanos</legend>
+						<center>
+							<div class="form-group">
+								<div class="col-md-8">
+									<input id="name" name="name" type="text" placeholder="Nombre" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-8">
+									<input id="last" name="last" type="text" placeholder="Apellido" class="form-control">
+								</div>
+							</div>
+	
+							<div class="form-group">
+								<div class="col-md-8">
+									<input id="email" name="email" type="email" placeholder="Correo" class="form-control">
+								</div>
+							</div>
+	
+							<div class="form-group">
+								<div class="col-md-8">
+									<input id="phone" name="phone" type="text" placeholder="Telefono Móvil" class="form-control" maxlength="9">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-md-8">
+									<input id="fecha" name="fecha" type="date" placeholder="Fecha de nacimiento" min="1960-01-01" max="2001-12-31" class="form-control">
+								</div>
+							</div>
+	
+							<div class="form-group">
+								<div class="col-md-8">
+									<textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escriba su mensaje aqui" rows="7" maxlength="150"></textarea>
+								</div>
+							</div>
+	
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+								  <a type="submit" class="btn btn-primary"  onclick="getdata()" data-toggle="modal" data-target="#exampleModal" >Enviar</a>
+								</div>
+								<div class="col-sm-offset-2 col-sm-10">
+									<a type="submit" class="btn btn-danger" href="index.html">Regresar</a>
+								  </div>
+							  </div>
+						</center>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Notificación</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body" >
+				<form name="registro">
+				<p>Nombre:<input type="text" name="dato1" id="dato1" readonly="readonly" style="border: 0;"></input></p>
+				<p>Apellido:<input type="text" name="dato2" id="dato2" readonly="readonly" style="border: 0;"></input></p>
+				<p>Correo:<input type="text" id="dato3" readonly="readonly" style="border: 0;"></input></p>
+				<p>Telefono:<input type="text" id="dato4" readonly="readonly" style="border: 0;"></input></p>
+				<p>Fecha de Nacimiento:<input type="text" id="dato5" readonly="readonly" style="border: 0;"></input></p>
+				<p>Mensaje:<input type="text" id="dato6" readonly="readonly" style="border: 0;"></input></p>
+			</br>
+				<p>Muy pronto nos pondremos en contacto. </p>
+				</form>
+			</div>
+			<div class="modal-footer">
+			  <a type="button" class="btn btn-primary" href="index.html">Aceptar</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+<script type="text/javascript" src="proceso.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
